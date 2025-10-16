@@ -1,0 +1,150 @@
+/*/* 🌈 Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🌍 Root Variables */
+:root {
+  --primary: #0066ff;
+  --secondary: #002b80;
+  --bg: #f8faff;
+  --text: #222;
+  --radius: 1rem;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+  --max-width: 1100px;
+}
+
+/* 🧱 Layout */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+header, main, footer {
+  width: 100%;
+  max-width: var(--max-width);
+  text-align: center;
+}
+
+/* ✨ Typography (Fluid using clamp) */
+h1 {
+  font-size: clamp(1.8rem, 2.5vw + 1rem, 3rem);
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+h2, h3 {
+  font-size: clamp(1.4rem, 1.5vw + 0.5rem, 2rem);
+  color: var(--primary);
+  margin-top: 2rem;
+}
+
+p {
+  font-size: clamp(0.95rem, 0.8vw + 0.4rem, 1.1rem);
+  margin: 0.5rem auto;
+  max-width: 800px;
+}
+
+/* 🧩 Buttons */
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,102,255,0.2);
+}
+
+/* 🪶 Footer */
+footer {
+  margin-top: auto;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* 🧮 Data Table (for future dashboard use) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem auto;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+/* Caption */
+caption {
+  caption-side: top;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+}
+
+/* Column Group */
+colgroup col:first-child {
+  background-color: #e8f0ff;
+  width: 25%;
+}
+colgroup col:nth-child(2) {
+  background-color: #f5f9ff;
+  width: 25%;
+}
+colgroup col:nth-child(3) {
+  background-color: #e8f7ff;
+  width: 25%;
+}
+colgroup col:nth-child(4) {
+  background-color: #f0faff;
+  width: 25%;
+}
+
+/* Thead / Tbody / Tfoot */
+thead {
+  background-color: var(--primary);
+  color: #fff;
+}
+tbody tr:nth-child(odd) {
+  background: #f9fcff;
+}
+tbody tr:nth-child(even) {
+  background: #eef6ff;
+}
+tfoot {
+  background-color: #dfe9ff;
+  font-weight: 600;
+}
+
+/* Table Cells */
+th, td {
+  padding: 0.75rem;
+  text-align: center;
+  border: 1px solid #dde7ff;
+}
+
+/* Colspan / Rowspan demo styles */
+td[colspan] {
+  background: #cfe2ff;
+  font-style: italic;
+}
+td[rowspan] {
+  background: #d9f0ff;
+  font-weight: 500;
+}
